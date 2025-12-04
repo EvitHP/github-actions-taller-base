@@ -24,7 +24,7 @@ jobs:
   deploy:
     needs: [build_and_test]
     runs-on:
-      ubuntu-latest
+      ${{ matrix.os }}
     steps:
       - name: 1. descargar el cosdigo
         uses: actions/checkout@v4
